@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "d45a1fab-7c4f-46e4-86a3-f70bc71a40be",
+		"name": "OpenTag Technical Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17008640"
+	},
+	"item": [
+		{
+			"name": "GetAllSpeciesFromTheFirstMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query GetAllSpeciesFromTheFirstMovie {\n  film(id: \"ZmlsbXM6MQ==\"){\n    speciesConnection{\n      species\n      {name}\n    }\n  }\n}\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetInfoAboutDroid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query GetInfoAboutDroid {\n  person(id: \"c3BlY2llczoy\") {\n    name\n    birthYear\n    homeworld {\n      id\n      name\n    }\n    eyeColor\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TotalCountAndGeneralInfoAboutPeoplesInTheMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query TotalCountAndGeneralInfoAboutPeoplesInTheMovie {\n  allPeople {\n    totalCount\n    people {\n      id\n      name\n      gender\n    }\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetInfoAboutSpecificPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query GetInfoAboutSpecificPerson {\n  person(id: \"cGVvcGxlOjQ=\") {\n    name\n    birthYear\n    eyeColor\n    starshipConnection {\n      starships {\n        name\n      }\n    }\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
